@@ -1,4 +1,10 @@
 import React from 'react';
+
+export const metadata = {
+    title: "Dashboard",
+    description: "Learn more about our company and mission."
+};
+
 const blogs = [
   {
     id: 1,

@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
 
+export const metadata = {
+    title: "Blog",
+    description: "Read our latest blog posts."
+};
+
 const BlogPage = () => {
   const blogs = [
     {

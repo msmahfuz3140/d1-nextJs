@@ -1,4 +1,6 @@
+'use client'
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const blogs = [
   {
@@ -204,6 +206,7 @@ const blogs = [
 ];
 
 const DashboardLayout = ({ children }) => {
+  const pathName = usePathname();
   return (
     <div className="drawer lg:drawer-open">
 
@@ -226,7 +229,7 @@ const DashboardLayout = ({ children }) => {
 
           {blogs.map((blog) => (
             <li key={blog.id}>
-              <Link href={`/dashboard/${blog.id}`}>
+              <Link className={pathName === `/dashboard/${blog.id}` ? "bg-primary text-white" : "hover:bg-base-300"} href={`/dashboard/${blog.id}`}>
                 {blog.title}
               </Link>
             </li>

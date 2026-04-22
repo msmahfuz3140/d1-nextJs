@@ -3,6 +3,11 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 
+// export const metadata = {
+//     title: "Login",
+//     description: "Sign in to your account."
+// };
+
 
 const LoginPage = () => {
     const [showPassword, setShowPassword] = useState(false);
